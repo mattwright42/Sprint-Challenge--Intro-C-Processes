@@ -14,7 +14,7 @@ int main(int argc, char **argv)
 
   if (!dir)
   {
-    perror("Could not open directory.");
+    printf("Error: Could not open directory.");
     exit(1);
   }
 
@@ -22,7 +22,7 @@ int main(int argc, char **argv)
   readdir();
 
   // Close directory
-  closedir();
+  closedir(dir);
 
   return 0;
 }
